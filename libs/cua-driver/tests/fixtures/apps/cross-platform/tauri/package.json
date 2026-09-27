@@ -5,6 +5,6 @@
   "description": "cua-driver Tauri test harness loading the shared web DOM",
   "scripts": {
     "build": "cargo build --release --manifest-path src-tauri/Cargo.toml",
-    "dev": "cargo run --manifest-path src-tauri/Cargo.toml"
+    "dev": "node api.js && cargo run --manifest-path src-tauri/Cargo.toml"
   }
 }

@@ -1,13 +1,13 @@
 {
   "name": "cua-test-harness-electron",
   "version": "1.0.0",
-  "description": "cua-driver Electron test harness — loads the same shared/web/index.html as CuaTestHarness.WebView",
+  "description": "cua-driver Electron test harness \u2014 loads the same shared/web/index.html as CuaTestHarness.WebView",
   "private": true,
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "start:linux": "electron . --no-sandbox --disable-gpu --force-renderer-accessibility",
-    "start:macos": "electron . --force-renderer-accessibility",
+    "start": "node api.js && electron .",
+    "start:linux": "node api.js && electron . --no-sandbox --disable-gpu --force-renderer-accessibility",
+    "start:macos": "node api.js && electron . --force-renderer-accessibility",
     "build": "electron-builder --win portable --x64",
     "build:linux": "electron-builder --linux dir --x64",
     "build:macos": "electron-builder --mac dir --universal"
@@ -29,16 +29,24 @@
       "package.json"
     ],
     "win": {
-      "target": [{
-        "target": "portable",
-        "arch": ["x64"]
-      }]
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
     },
     "linux": {
-      "target": [{
-        "target": "dir",
-        "arch": ["x64"]
-      }],
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
       "category": "Development"
     },
     "portable": {

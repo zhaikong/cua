@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "sdk:browser": "./scripts/ensure-browser-sdk-binding.sh",
-    "dev": "npm run sdk:browser && vite",
+    "dev": "node api.js && npm run sdk:browser && vite",
     "build": "npm run sdk:browser && npm run build:app",
     "build:app": "tsc -b && vite build",
     "preview": "vite preview",

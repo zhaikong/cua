@@ -4,7 +4,7 @@
   "private": true,
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "node api.js && electron ."
   },
   "devDependencies": {
     "electron": "^39.8.5"

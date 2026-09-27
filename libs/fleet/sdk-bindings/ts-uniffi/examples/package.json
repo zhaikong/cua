@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "tsx node.ts",
+    "start": "node api.js && tsx node.ts",
     "build": "tsc"
   },
   "dependencies": {

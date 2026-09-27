@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbo -p 8090",
-    "start": "next start -p 8090",
+    "dev": "node api.js && next dev --turbo -p 8090",
+    "start": "node api.js && next start -p 8090",
     "postinstall": "fumadocs-mdx",
     "docs:generate": "tsx ../scripts/docs-generators/runner.ts",
     "docs:check": "tsx ../scripts/docs-generators/runner.ts --check",
