@@ -89,7 +89,6 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 # Environments
-.env
 .venv
 env/
 venv/
@@ -125,7 +124,6 @@ cython_debug/
 # Conda
 .conda/
 # Local environment
-.env.local
 # macOS DS_Store
 .DS_Store
 weights/
@@ -219,3 +217,4 @@ docs/scripts/check-all-links.py
 docs/scripts/check-mdx-links.py
 # Local Windows RE scratch (downloaded PDBs, disassembly scripts)
 .re-windows/
+config.bat
