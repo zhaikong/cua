@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:wasm": "node scripts/patch-ubrn-wasm-template.mjs && ubrn build web --config ubrn.config.yaml --and-generate --release",
-    "build": "npm run build:wasm && vite build",
+    "build:wasm": "node init && node scripts/patch-ubrn-wasm-template.mjs && ubrn build web --config ubrn.config.yaml --and-generate --release",
+    "build": "node init && npm run build:wasm && vite build",
     "test:artifact": "playwright test --project=chromium tests/browser-artifact.spec.ts",
     "test:live": "playwright test --project=chromium tests/browser-live.spec.ts"
   },
