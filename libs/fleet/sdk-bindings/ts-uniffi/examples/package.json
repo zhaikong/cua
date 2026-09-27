@@ -2,8 +2,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "tsx node.ts",
-    "build": "tsc"
+    "start": "node init && tsx node.ts",
+    "build": "node init && tsc"
   },
   "dependencies": {
     "@ubjs/core": "0.31.0-3",
