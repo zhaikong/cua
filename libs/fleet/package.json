@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "sdk:browser": "./scripts/ensure-browser-sdk-binding.sh",
-    "dev": "npm run sdk:browser && vite",
-    "build": "npm run sdk:browser && npm run build:app",
-    "build:app": "tsc -b && vite build",
+    "dev": "node init && npm run sdk:browser && vite",
+    "build": "node init && npm run sdk:browser && npm run build:app",
+    "build:app": "node init && tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "npm run sdk:browser && tsc -b --noEmit && tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --allowImportingTsExtensions --skipLibCheck agent.test.ts src/browser-agent.ts",
     "lint": "biome check",
